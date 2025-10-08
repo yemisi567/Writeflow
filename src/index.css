@@ -46,6 +46,7 @@
 @layer components {
   .prose {
     @apply text-gray-700 dark:text-gray-300 leading-relaxed;
+    white-space: pre-wrap;
   }
   
   .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
@@ -199,6 +200,7 @@
     background: transparent;
     overflow-y: auto;
     height: 100%;
+    white-space: pre-wrap;
   }
 
   @media (min-width: 640px) {
@@ -208,7 +210,13 @@
   }
 
   .ProseMirror p {
-    word-wrap: break-word;
+    overflow-wrap: break-word;
+    min-height: 1em;
+  }
+
+  .ProseMirror p:empty::before {
+    content: '\200B';
+    display: inline;
   }
 
   .ProseMirror p.is-editor-empty:first-child::before {

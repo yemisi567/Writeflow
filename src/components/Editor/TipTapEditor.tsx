@@ -67,6 +67,11 @@ const TipTapEditor: React.FC<TipTapEditorProps> = ({
               "border-l-4 border-gray-300 dark:border-gray-600 pl-4 italic",
           },
         },
+        paragraph: {
+          HTMLAttributes: {
+            class: "min-h-[1em]",
+          },
+        },
       }),
       CodeBlock.configure({
         HTMLAttributes: {
@@ -177,9 +182,10 @@ const TipTapEditor: React.FC<TipTapEditorProps> = ({
 
   // Update editor content when initialContent changes
   useEffect(() => {
-    if (editor && initialContent) {
-      editor.commands.setContent(initialContent);
-    }
+    if (!editor) return;
+    const incomingContent = initialContent ?? "";
+    if (editor.getHTML() === incomingContent) return;
+    editor.commands.setContent(incomingContent);
   }, [editor, initialContent]);
 
   const formatText = useCallback(
