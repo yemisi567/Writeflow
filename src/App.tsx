@@ -144,6 +144,7 @@ const App: React.FC = () => {
           tags: updatedDoc.tags,
           word_count: updatedDoc.wordCount,
         });
+        console.log("result", result.word_count);
         console.log("Document updated in Supabase successfully:");
       } catch (error) {
         console.error("Failed to update document in Supabase:", error);
@@ -424,7 +425,9 @@ const App: React.FC = () => {
 
       // Generate and download the document
       const buffer = await Packer.toBuffer(doc);
-      const blob = new Blob([buffer], {
+      // Convert Buffer to Uint8Array for browser compatibility
+      const uint8Array = new Uint8Array(buffer);
+      const blob = new Blob([uint8Array], {
         type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
       });
       const url = URL.createObjectURL(blob);
