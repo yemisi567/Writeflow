@@ -144,6 +144,7 @@ const App: React.FC = () => {
           tags: updatedDoc.tags,
           word_count: updatedDoc.wordCount,
         });
+        console.log("result", result.word_count);
         console.log("Document updated in Supabase successfully:");
       } catch (error) {
         console.error("Failed to update document in Supabase:", error);
