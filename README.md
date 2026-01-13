@@ -2,7 +2,7 @@
 
 A modern, distraction-free writing editor built with React, TypeScript, and Supabase. WriteFlow provides a seamless writing experience with real-time collaboration, auto-save functionality, and cloud synchronization.
 
-## ✨ Features
+## Features
 
 - **Distraction-Free Writing**: Clean, minimal interface focused on content creation
 - **Auto-Save**: Never lose your work with automatic saving
@@ -72,16 +72,12 @@ A modern, distraction-free writing editor built with React, TypeScript, and Supa
 6. **Open your browser**
    Navigate to `http://localhost:3000`
 
-## 📸 Screenshots
+## Screenshots
 
 ### Desktop Experience
 <img width="1777" height="899" alt="Screenshot 2025-09-21 at 01 05 52" src="https://github.com/user-attachments/assets/5f7913e0-38cb-4d7a-a508-1e3d8b3fe5ef" />
 
-### Mobile Experience
-
-<img width="368" height="803" alt="Screenshot 2025-09-21 at 01 06 08" src="https://github.com/user-attachments/assets/2cefcd89-c01d-49e2-8260-5ac546c7d954" />
-
-## 🏗️ Tech Stack
+## Tech Stack
 
 ### Frontend
 
@@ -105,7 +101,7 @@ A modern, distraction-free writing editor built with React, TypeScript, and Supa
 - **Prettier** - Code formatting
 - **Service Worker** - Offline support
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 writeflow/
@@ -130,7 +126,7 @@ writeflow/
 └── package.json
 ```
 
-## 🔧 Configuration
+## Configuration
 
 ### Supabase Setup
 
@@ -188,14 +184,14 @@ I welcome contributions.
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - [TipTap](https://tiptap.dev/) - Rich text editor
 - [Supabase](https://supabase.com/) - Backend infrastructure
 - [Tailwind CSS](https://tailwindcss.com/) - Styling framework
 - [Framer Motion](https://www.framer.com/motion/) - Animation library
 
-## 📞 Support
+## Support
 
 - 📧 Email: alegbeyemi@gmail.com
 
