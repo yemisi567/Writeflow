@@ -128,30 +128,6 @@ writeflow/
 
 ## Configuration
 
-### Supabase Setup
-
-1. Create a new Supabase project
-2. Run the provided SQL schema:
-
-   ```sql
-   -- See supabase-setup.sql for complete schema
-   CREATE TABLE documents (
-     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-     title TEXT NOT NULL,
-     content JSONB NOT NULL DEFAULT '[]',
-     last_modified TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-     is_starred BOOLEAN DEFAULT FALSE,
-     is_archived BOOLEAN DEFAULT FALSE,
-     tags TEXT[] DEFAULT '{}',
-     word_count INTEGER DEFAULT 0,
-     created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-     updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
-   );
-   ```
-
-3. Enable Row Level Security (RLS) policies
-4. Update your environment variables
-
 ### Environment Variables
 
 ```env
