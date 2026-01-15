@@ -156,14 +156,13 @@ const TipTapWrapper: React.FC<TipTapWrapperProps> = ({
             });
             break;
           case "p":
-            if (content && content.trim().length > 0) {
-              blocks.push({
-                id: `block-${blockId++}`,
-                type: "text",
-                content,
-                htmlContent,
-              });
-            }
+            // Always preserve paragraph blocks, even if empty (for proper newline handling)
+            blocks.push({
+              id: `block-${blockId++}`,
+              type: "text",
+              content: content || "",
+              htmlContent,
+            });
             break;
           default:
             // For other elements, only process if they have meaningful content

@@ -212,11 +212,18 @@
   .ProseMirror p {
     overflow-wrap: break-word;
     min-height: 1em;
+    margin: 0;
+    padding: 0;
+  }
+
+  .ProseMirror p:empty {
+    min-height: 1em;
   }
 
   .ProseMirror p:empty::before {
     content: '\200B';
-    display: inline;
+    display: inline-block;
+    width: 0;
   }
 
   .ProseMirror p.is-editor-empty:first-child::before {
